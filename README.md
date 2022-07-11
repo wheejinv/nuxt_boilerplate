@@ -20,4 +20,6 @@ yarn
 # make run
 sudo chmod +x run.sh
 
+# run!!
+./run.sh
 ```
