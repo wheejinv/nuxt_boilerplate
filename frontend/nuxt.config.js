@@ -34,12 +34,18 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios'
   ],
 
   // https://dev.to/paramo/using-sass-global-variables-in-nuxt-js-j0k
   styleResources: {
     scss: ['assets/scss/*.scss']
+  },
+
+  axios: {
+    // https://axios.nuxtjs.org/options/
+    baseURL: "http://localhost:3001"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
