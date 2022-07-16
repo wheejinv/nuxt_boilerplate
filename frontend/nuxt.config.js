@@ -16,11 +16,6 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    'assets/scss/common.scss'
-  ],
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
@@ -38,9 +33,14 @@ export default {
     '@nuxtjs/axios'
   ],
 
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [
+    'assets/scss/main.scss'
+  ],
+
   // https://dev.to/paramo/using-sass-global-variables-in-nuxt-js-j0k
   styleResources: {
-    scss: ['assets/scss/*.scss']
+    scss: ['assets/scss/abstracts/_variable.scss', 'assets/scss/abstracts/_mixins.scss']
   },
 
   axios: {
