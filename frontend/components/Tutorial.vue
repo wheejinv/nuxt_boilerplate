@@ -4,24 +4,18 @@
     hello world from client!
 
     <div class="from-server">
-      {{response}}
+      {{text}}
     </div>
 
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'IndexPage',
-  async mounted() {
-    const {data} = await axios.get('http://localhost:3001/');
-    this.response = data;
-  },
-  data() {
-    return {
-      response: 'hello default'
+  props: {
+    text: {
+      type: String,
     }
   }
 }
