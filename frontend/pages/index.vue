@@ -3,8 +3,6 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   name: 'IndexPage',
   data() {
@@ -12,11 +10,15 @@ export default {
       text: 'hello default'
     }
   },
+  async mounted() {
+    // 현재 클라 사이드에서 실행할 때에만 쿠키값이 셋팅됨.
+    const text = await this.$axios.$get('/');
+  },
   async asyncData(context) {
-    const {data} = await axios.get('http://localhost:3001/');
+    const text = await context.$axios.$get('/');
 
     return {
-      text: data,
+      text,
     }
   }
 }
