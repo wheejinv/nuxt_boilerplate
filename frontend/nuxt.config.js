@@ -19,6 +19,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios.js',
+    { src: '~/plugins/forward-set-cookies.js', mode: 'server' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -30,6 +31,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'cookie-universal-nuxt',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios'
   ],
